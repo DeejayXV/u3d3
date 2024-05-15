@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Esercizio u3d3</title>
-    <script src="./u3d3.css"></script>
+    <link rel="stylesheet" href="./u3d3.css" />
   </head>
   <body>
-    <main>
-      <div id="container">
-        <input type="text" id="nuovoTaskInput" placeholder="Add a new task" />
-        <button onclick="aggiungiTask()">Add Task</button>
-      </div>
-      <div id="taskListContainer"></div>
-    </main>
+    <div id="container">
+      <h3 id="title1">To-do List:</h3>
+
+      <input type="text" id="nuovoTaskInput" placeholder="Add a new task" />
+      <button onclick="aggiungiTask()">Add Task</button>
+    </div>
+    <ul id="taskListContainer" class="task-list"></ul>
+
     <script src="./u3d3.js"></script>
   </body>
 </html>

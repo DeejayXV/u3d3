@@ -1,19 +1,12 @@
-// function addTask() {
-//   const task = document.createElement("div");
-//   task.classList.add("task");
-
-//   const toDo = document.createElement("p");
-//   toDo.innerText = "to-do list";
-
-//   task.appendChild(toDo);
-
-//   document.body.appendChild(task);
-// }
 function aggiungiTask() {
-  const nuovoTask = document.getElementById("nuovoTaskInput").value;
-  const listItem = document.createElement("p");
-  listItem.innerText = nuovoTask;
-  listItem.classList.add("taskListItem");
+  const nuovoTaskInput = document.getElementById("nuovoTaskInput");
+  const nuovoTask = nuovoTaskInput.value.trim();
+  const listItem = document.createElement("li");
+  listItem.textContent = nuovoTask;
+  listItem.classList.add("task-list-item");
+  listItem.addEventListener("click", function () {
+    listItem.classList.toggle("completato");
+  });
   document.getElementById("taskListContainer").appendChild(listItem);
-  document.getElementById("nuovoTaskInput").value = " ";
+  nuovoTaskInput.value = "";
 }
